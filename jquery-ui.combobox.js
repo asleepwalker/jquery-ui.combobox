@@ -1,7 +1,7 @@
 (function( $ ) {
 	$.widget( "custom.combobox", {
 		_create: function() {
-			this.wrapper = $( "<span>" )
+			this.wrapper = $( "<div>" )
 				.addClass( "ui-combobox" )
 				.insertAfter( this.element );
 
@@ -30,6 +30,7 @@
 
 			this._on( this.input, {
 				autocompleteselect: function( event, ui ) {
+					this.input.removeClass( "ui-input-invalid" );
 					ui.item.option.selected = true;
 					this._trigger( "select", event, {
 						item: ui.item.option
@@ -44,19 +45,10 @@
 			var input = this.input,
 				wasOpen = false;
 
-			$( "<a>" )
+			$( "<span>" )
+				.addClass('ui-icon ui-icon-triangle-1-s')
 				.attr( "tabIndex", -1 )
-				.attr( "title", "Show All Items" )
-				.tooltip()
 				.appendTo( this.wrapper )
-				.button({
-					icons: {
-						primary: "ui-icon-triangle-1-s"
-					},
-					text: false
-				})
-				.removeClass( "ui-corner-all" )
-				.addClass( "ui-combobox-toggle ui-corner-right" )
 				.mousedown(function() {
 					wasOpen = input.autocomplete( "widget" ).is( ":visible" );
 				})
@@ -87,6 +79,7 @@
 		},
 
 		_removeIfInvalid: function( event, ui ) {
+			this.input.removeClass( "ui-input-invalid" );
 
 			// Selected an item, nothing to do
 			if ( ui.item ) {
@@ -110,15 +103,9 @@
 			}
 
 			// Remove invalid value
-			this.input
-				.val( "" )
-				.attr( "title", value + " didn't match any item" )
-				.tooltip( "open" );
 			this.element.val( "" );
-			this._delay(function() {
-				this.input.tooltip( "close" ).attr( "title", "" );
-			}, 2500 );
 			this.input.autocomplete( "instance" ).term = "";
+			this.input.addClass( "ui-input-invalid" );
 		},
 
 		_destroy: function() {
