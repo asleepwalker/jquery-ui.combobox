@@ -2,7 +2,7 @@
 	$.widget( "custom.combobox", {
 		_create: function() {
 			this.wrapper = $( "<span>" )
-				.addClass( "custom-combobox" )
+				.addClass( "ui-combobox" )
 				.insertAfter( this.element );
 
 			this.element.hide();
@@ -18,7 +18,7 @@
 				.appendTo( this.wrapper )
 				.val( value )
 				.attr( "title", "" )
-				.addClass( "custom-combobox-input ui-widget ui-widget-content ui-state-default ui-corner-left" )
+				.addClass( "ui-combobox-input ui-widget ui-widget-content ui-state-default ui-corner-left" )
 				.autocomplete({
 					delay: 0,
 					minLength: 0,
@@ -56,7 +56,7 @@
 					text: false
 				})
 				.removeClass( "ui-corner-all" )
-				.addClass( "custom-combobox-toggle ui-corner-right" )
+				.addClass( "ui-combobox-toggle ui-corner-right" )
 				.mousedown(function() {
 					wasOpen = input.autocomplete( "widget" ).is( ":visible" );
 				})
