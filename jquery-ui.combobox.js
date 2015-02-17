@@ -35,6 +35,7 @@
 					this._trigger( "select", event, {
 						item: ui.item.option
 					});
+					this.input.trigger( "change" );
 				},
 
 				autocompletechange: "_removeIfInvalid"
