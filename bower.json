@@ -1,0 +1,19 @@
+{
+  "name": "jquery-ui.combobox",
+  "main": "jquery-ui.combobox.js",
+  "version": "1.0.0",
+  "homepage": "https://github.com/asleepwalker/jquery-ui.combobox",
+  "authors": [
+    "Sleepwalker <mail@asleepwalker.ru>"
+  ],
+  "description": "jQuery UI widget to improve usability of selects with filter input",
+  "keywords": [
+    "jquery",
+    "ui",
+    "jquery-ui",
+    "comboxbox",
+    "select",
+    "autocomplete"
+  ],
+  "license": "MIT"
+}
