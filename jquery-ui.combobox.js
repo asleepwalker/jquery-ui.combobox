@@ -23,22 +23,42 @@
 					delay: 0,
 					minLength: 0,
 					source: $.proxy( this, "_source" )
-				})
-				.tooltip({
-					tooltipClass: "ui-state-highlight"
 				});
 
 			this._on( this.input, {
 				autocompleteselect: function( event, ui ) {
-					this.input.removeClass( "ui-input-invalid" );
+					var input = this.input;
+
+					input.removeClass( "ui-input-invalid" );
 					ui.item.option.selected = true;
 					this._trigger( "select", event, {
 						item: ui.item.option
 					});
-					this.element.trigger( "change" );
+					setTimeout( function() {
+						input.blur();
+					}, 1 );
 				},
 
-				autocompletechange: "_removeIfInvalid"
+				focus: function() {
+
+					// Make input empty but still keep visible previous value
+					this.input
+						.attr( "placeholder", this.input.val() )
+						.val( "" );
+
+					// Pass empty string as value to search for, displaying all results
+					this.input.autocomplete( "search", "" );
+				},
+
+				blur: function() {
+
+					// Restore previous value if another wasn't typed
+					if ( this.input.val() === "" ) {
+						this.input.val( this.input.attr( "placeholder" ) );
+					}
+					this._removeIfInvalid();
+					this.element.trigger( "change" );
+				}
 			});
 		},
 
@@ -50,19 +70,8 @@
 				.addClass('ui-icon ui-icon-triangle-1-s')
 				.attr( "tabIndex", -1 )
 				.appendTo( this.wrapper )
-				.mousedown(function() {
-					wasOpen = input.autocomplete( "widget" ).is( ":visible" );
-				})
 				.click(function() {
 					input.focus();
-
-					// Close if already visible
-					if ( wasOpen ) {
-						return;
-					}
-
-					// Pass empty string as value to search for, displaying all results
-					input.autocomplete( "search", "" );
 				});
 		},
 
@@ -83,7 +92,7 @@
 			this.input.removeClass( "ui-input-invalid" );
 
 			// Selected an item, nothing to do
-			if ( ui.item ) {
+			if ( ui && ui.item ) {
 				return;
 			}
 
