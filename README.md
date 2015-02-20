@@ -1,4 +1,4 @@
-#jQuery UI > Combobox
+#jQueryUI.Combobox
 
 [jQuery UI][] combobox plugin stolen from [Autocomplete Widget][] demos.
 
