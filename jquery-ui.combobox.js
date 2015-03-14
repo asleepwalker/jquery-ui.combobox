@@ -1,3 +1,9 @@
+/*
+*	jQueryUI.Combobox, v1.0.0
+*	(c) 2015 Artyom "Sleepwalker" Fedosov <mail@asleepwalker.ru>
+*	https://github.com/asleepwalker/jquery-ui.combobox
+*/
+
 (function( $ ) {
 	$.widget( "custom.combobox", {
 		_create: function() {
