@@ -1,10 +1,13 @@
 #jQueryUI.Combobox
 
-[jQuery UI][] combobox plugin stolen from [Autocomplete Widget][] demos.
+[jQuery UI](http://jqueryui.com/) widget to improve usability of selects with filter input
 
 ```
 $('select').combobox();
 ```
 
- [jQuery UI]: http://jqueryui.com/
- [Autocomplete Widget]: http://jqueryui.com/autocomplete/
+### <a href="http://asleepwalker.github.io/jquery-ui.combobox/">Demo</a>
+
+## License
+
+The MIT License.
