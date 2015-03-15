@@ -1,0 +1,50 @@
+.wrapper {
+	margin: 0 auto;
+	max-width: 600px;
+	padding: 0 50px;
+}
+
+.ui-combobox {
+	position: relative;
+}
+
+.ui-combobox-input {
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	cursor: pointer;
+	font-size: 14px;
+	font-weight: normal;
+	padding: 5px 6px;
+	width: 100%;
+}
+.ui-combobox-input:focus {
+	cursor: inherit;
+}
+.ui-combobox-input.ui-input-invalid {
+	border-color: red;
+	color: red;
+}
+.ui-icon-triangle-1-s {
+	right: 0.5em;
+	left: auto;
+	margin-top: -8px;
+	position: absolute;
+	top: 50%;
+}
+
+.ui-autocomplete {
+	font-size: 80%;
+	max-height: 300px;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+.ui-autocomplete .ui-state-focus {
+	font-weight: normal;
+}
+
+a.repo {
+	text-decoration: none;
+}
+a.repo:hover {
+	text-decoration: underline;
+}
