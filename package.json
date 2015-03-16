@@ -1,0 +1,38 @@
+{
+  "name": "jquery-ui.combobox",
+  "version": "1.0.6",
+  "description": "jQuery UI widget to improve usability of selects with filter input",
+  "main": "lib/jquery-ui.combobox.js",
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/asleepwalker/jquery-ui.combobox.git"
+  },
+  "keywords": [
+    "jquery",
+    "jquery-ui",
+    "combobox",
+    "widget",
+    "ui",
+    "input",
+    "select",
+    "autocomplete",
+    "jquery-plugin"
+  ],
+  "author": "Artyom 'Sleepwalker' Fedosov <mail@asleepwalker.ru>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/asleepwalker/jquery-ui.combobox/issues"
+  },
+  "dependencies": {
+    "jquery": ">=1.6",
+    "jquery-ui": ">=1.8"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-contrib-jshint": "~0.11.0",
+    "grunt-jscs": "~1.5.0"
+  }
+}
