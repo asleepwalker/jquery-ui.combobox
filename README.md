@@ -6,6 +6,8 @@
 $('select').combobox();
 ```
 
+![combobox](https://cloud.githubusercontent.com/assets/5080313/9653448/243f6ae0-522c-11e5-8380-be0f0ece4e2b.png)
+
 ### <a href="http://asleepwalker.github.io/jquery-ui.combobox/">Demo</a>
 
 ## License
