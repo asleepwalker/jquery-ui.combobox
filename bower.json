@@ -1,7 +1,7 @@
 {
   "name": "jquery-ui.combobox",
-  "main": "jquery-ui.combobox.js",
-  "version": "1.0.6",
+  "main": "./lib/jquery-ui.combobox.js",
+  "version": "1.0.7",
   "homepage": "https://github.com/asleepwalker/jquery-ui.combobox",
   "authors": [
     "Artyom 'Sleepwalker' Fedosov <mail@asleepwalker.ru>"
