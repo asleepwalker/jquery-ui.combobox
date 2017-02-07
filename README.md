@@ -1,4 +1,4 @@
-#jQueryUI.Combobox &nbsp;[![Build Status](https://travis-ci.org/asleepwalker/jquery-ui.combobox.svg?branch=master)](https://travis-ci.org/asleepwalker/jquery-ui.combobox)
+#jQueryUI.Combobox [![Build Status](https://travis-ci.org/asleepwalker/jquery-ui.combobox.svg?branch=master)](https://travis-ci.org/asleepwalker/jquery-ui.combobox) [![Dependency Status](https://gemnasium.com/badges/github.com/asleepwalker/jquery-ui.combobox.svg)](https://gemnasium.com/github.com/asleepwalker/jquery-ui.combobox)
 
 [jQuery UI](http://jqueryui.com/) widget to improve usability of selects with filter input
 
