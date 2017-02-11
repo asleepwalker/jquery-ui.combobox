@@ -19,9 +19,10 @@ module.exports = function(grunt) {
 			options: {
 				preset: 'airbnb',
 				validateIndentation: '\t',
-				disallowMultipleVarDecl: null,
-				requireMultipleVarDecl: true,
-				requireCurlyBraces: ['if', 'else', 'for', 'while', 'do', 'try', 'catch', 'case']
+				requireCurlyBraces: ['if', 'else', 'for', 'while', 'do', 'try', 'catch', 'case'],
+				requireTrailingComma: false,
+				requirePaddingNewLinesAfterBlocks: false,
+				requireDollarBeforejQueryAssignment: false
 			}
 		}
 	});
