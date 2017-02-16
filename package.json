@@ -1,6 +1,6 @@
 {
   "name": "jquery-ui.combobox",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "jQuery UI widget to improve usability of selects with filter input",
   "main": "lib/jquery-ui.combobox.js",
   "scripts": {
